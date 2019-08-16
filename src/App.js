@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import DonutChart from './components/donut-chart';
+
+
 
 function App() {
+  const values = 123;
+  const chartData= [];
+  const colors= ["#6495ED", "goldenrod", "#cd5c5c", "thistle", "lightgray"];
+  const cx= 80;
+  const cy= 80;                      
+  const radius= 60;
+  const sortedValues= [];
+  const strokeWidth= 30; 
+  const initialValues = [230, 308, 520, 130, 200];   
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DonutChart initial-values={values}/>
+      
     </div>
   );
 }
